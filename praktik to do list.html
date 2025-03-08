@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name=""viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <title>To do list</title>
+    </head>
+    <body>
+        <div class="todo-wrapper">
+            <h2>My To Do List</h2>
+            <p>Klik dua kali untuk membuat list selesai</p>
+            <form name="todo-adder">
+                <input type="text" id="todo-entry-box">
+                <button class="pretty-button" id="add-button">Add</button>
+            </form>
+            <br>
+            <ol id="todo-list">
+            </ol>
+            <div id="control-wrapper">
+                <center>
+                <button id="clear-completed-button" onclick="clearCompletedToDoItems()" class="pretty-button-bawah"><b>Clear Completed</b></button>
+                <button id="empty-button" onclick="emptyList()" class="pretty-button-bawah"><b>Empty List</b></button>
+                <button id="save-button" onclick="saveList()" class="pretty-button-bawah"><b>Save List</b></button>
+                </center>
+            </div>
+        </div>
+
+        <script src="javaskrip.js"></script>
+
+    </body>
+</html>
