@@ -1,87 +1,153 @@
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgb(213, 200, 224);
+    background-size: cover;
+    border-radius: 10px;
+}
+
+
 body {
     background-image: url('blue archive wall2.jpg');
     background-size: cover;
     background-repeat: no-repeat; 
     background-position: center; 
-    background-position: center top;
     font-family: Helvetica;
     display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 10px;
 }
 
 .todo-wrapper {
-    background-color: rgba(255, 255, 255, 0.8);
-    margin: 50px auto;
+    background-color: rgba(255, 255, 255, 0.9);
+    margin: 20px auto;
     width: 50%;
-    padding: 25px;
+    max-width: 500px;
+    padding: 20px;
     border-radius: 15px;
     font-weight: 250;
-    align-items: center;
-    
+    text-align: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .todo-wrapper h2 {
     margin: 0;
+    font-size: 22px;
+    color: rgb(98, 83, 108)
 }
 
 .todo-wrapper p {
     font-style: italic;
     color: gray;
     margin: 5px 0 15px 0;
+    font-size: 14px;
 }
 
 .todo-wrapper ol {
     margin: 0 0 20px 0;
     border: solid 1px gray;
     border-radius: 15px;
+    padding: 10px; 
+    text-align: left;
+    background: white; 
+    list-style-position: inside; 
 }
 
 .todo-wrapper ol li {
-    margin: 5px 0 0 0;
-    padding: 3px;
-    transition: all 0.5s ease-out;
+    margin: 5px 0;
+    padding: 8px;
+    font-size: 14px;
+    border-bottom: 1px solid #ccc;
 }
 
+.todo-wrapper ol li:last-child {
+    border-bottom: none; 
+}
+
+
 .todo-wrapper form {
-    display: flex; 
+    display: flex;
     align-items: center;
-    gap: 10px; 
-    width: 100%; 
+    gap: 10px;
+    width: 100%;
+    flex-wrap: wrap;
 }
 
 .todo-wrapper input {
-    flex: 1; 
-    padding: 5px 8px;
+    flex: 1;
+    padding: 10px;
     border: solid 2px gray;
     border-radius: 15px;
-    width: 100%; 
     font-size: 14px;
+    width: 100%; 
+    box-sizing: border-box; 
 }
 
 .todo-wrapper .pretty-button {
-    flex-shrink: 0; 
-    padding: 8px 15px;
+    padding: 8px 12px;
     border-radius: 15px;
     background-color: rgb(138, 120, 154);
     color: white;
     border: none;
     cursor: pointer;
-    white-space: nowrap; 
+    white-space: nowrap;
+    transition: 0.3s;
 }
 
-
 .todo-wrapper .pretty-button:hover {
-    cursor: pointer;
     opacity: 0.7;
 }
 
+#control-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+    flex-wrap: wrap;
+}
+
 .pretty-button-bawah {
-    border: 2px solid gray; 
+    border: 2px solid gray;
     background-color: white;
     color: gray;
-    padding: 10px 20px; 
-    font-size: 16px;
-    cursor: pointer; 
-    border-radius: 5px; 
+    padding: 10px 15px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 5px;
     transition: all 0.3s ease;
-    margin: 0 40px 0 0;
+    margin-bottom: 7px;
 }
+
+
+@media (max-width: 768px) {
+    .todo-wrapper {
+        width: 90%; 
+        padding: 15px;
+    }
+
+    .todo-wrapper form {
+        flex-direction: column; 
+        gap: 5px;
+    }
+
+    .todo-wrapper input {
+        width: 100%;
+    }
+
+    .todo-wrapper .pretty-button {
+        width: 100%;
+    }
+
+    #control-wrapper {
+        flex-direction: column;
+    }
+
+    .pretty-button-bawah {
+        width: 100%;
+    }
+}
+
